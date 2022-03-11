@@ -4,7 +4,7 @@ There are 3 scripts which will help allow the user to get around the lab files m
 No more long cd/cp commands.
 
 To setup, you need to
-1. download/copy and setup script into your terminal (Should have the fullSetup.sh)
+1. download/copy and setup script into your terminal (Should have the name "fullSetup.sh")
 2. set the 3 variables which are close to the top of the script
 3. run the setup script
 4. logout and log back in
