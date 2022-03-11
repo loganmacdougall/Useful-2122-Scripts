@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Author: Logan MacDougall
+# Filename: tp
+
+# This allows users to quickly "teleport" into you lab folders
+# and your lib folder. no more long cd commands just to get into
+# lab folder 6, all it takes is "tp lab 6"
+
+# Must set these 3 variables for it to work on your machine
+USERNAME="macdougall"
+LABSFOLDER="/users/cs/$USERNAME/Courses/CSCI2122/Labs"
+LIBSFOLDER="$LABSFOLDER/libs"
+
+if [ $# == 0 ]; then
+    echo "Usage: tp [LOCATION]";
+    echo "Use \"tp -list\" for a list of locations"
+    return 128;
+else
+    case $1 in
+        "-list")
+            echo "You can go to the following locations:"
+            echo "    lib : Goes to your lib folder."
+            echo "    lab : Goes to the folder containing all the labs."
+            echo "    lab [NUMBER] : Goes into the repo of lab NUMBER if it exists, otherwise, will just go into the lab NUMBER folder."
+            echo "    lab [NUMBER] [CONTRACT] : Goes into the CONTRACT folder of lab NUMBER. If that contract folder doesn't exist, it will ignore CONTRACT."
+            ;;
+
+        "lib")
+            cd ${LIBSFOLDER}
+            ;;
+
+        "lab")
+            if [ $# -ge 3 -a -d $LABSFOLDER/Lab$2/$USERNAME/Lab$2/$3 ]; then
+                cd $LABSFOLDER/Lab$2/$USERNAME/Lab$2/$3
+            elif [ $# -ge 2 -a -d $LABSFOLDER/Lab$2/$USERNAME ]; then
+                cd $LABSFOLDER/Lab$2/$USERNAME
+            elif [ $# -ge 2 -a -d $LABSFOLDER/Lab$2 ]; then
+                cd $LABSFOLDER/Lab$2
+            else
+                cd $LABSFOLDER
+            fi
+            ;;
+
+        *)
+            echo "Unknow location"
+            echo "Use \"tp -list\" for a list of locations"
+            ;;
+    esac
+fi
+
+return 0;
