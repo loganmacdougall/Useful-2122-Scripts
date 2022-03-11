@@ -20,3 +20,5 @@ USAGE:
 EXAMPLE:
 For c-file "test.c" at opLevel 2, you would type:
 ``./autoObjDump test 2``
+
+The best way to use this is to have 2 seprate terminals open at once (one to edit your file and the second to view the assembly code using the autoObjDump program)
