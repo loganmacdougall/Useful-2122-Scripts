@@ -8,9 +8,9 @@
 # lab folder 6, all it takes is "tp lab 6"
 
 # Must set these 3 variables for it to work on your machine
-USERNAME="macdougall"
 LABSFOLDER="/users/cs/$USERNAME/Courses/CSCI2122/Labs"
 LIBSFOLDER="$LABSFOLDER/libs"
+LABPREFIX="Lab"
 
 if [ $# == 0 ]; then
     echo "Usage: tp [LOCATION]";
@@ -31,12 +31,12 @@ else
             ;;
 
         "lab")
-            if [ $# -ge 3 -a -d $LABSFOLDER/Lab$2/$USERNAME/Lab$2/$3 ]; then
-                cd $LABSFOLDER/Lab$2/$USERNAME/Lab$2/$3
-            elif [ $# -ge 2 -a -d $LABSFOLDER/Lab$2/$USERNAME ]; then
-                cd $LABSFOLDER/Lab$2/$USERNAME
-            elif [ $# -ge 2 -a -d $LABSFOLDER/Lab$2 ]; then
-                cd $LABSFOLDER/Lab$2
+            if [ $# -ge 3 -a -d $LABSFOLDER/$LABPREFIX$2/$USERNAME/Lab$2/$3 ]; then
+                cd $LABSFOLDER/$LABPREFIX$2/$USERNAME/Lab$2/$3
+            elif [ $# -ge 2 -a -d $LABSFOLDER/$LABPREFIX$2/$USERNAME ]; then
+                cd $LABSFOLDER/$LABPREFIX$2/$USERNAME
+            elif [ $# -ge 2 -a -d $LABSFOLDER/$LABPREFIX$2 ]; then
+                cd $LABSFOLDER/$LABPREFIX$2
             else
                 cd $LABSFOLDER
             fi
