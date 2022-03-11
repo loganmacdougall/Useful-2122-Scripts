@@ -22,7 +22,7 @@ LABPREFIX=""
 
 if [ -z "$LABPREFIX" ] || [ -z "$LABSFOLDER" ] || [ -z "$LIBSFOLDER" ]; then
         echo "All 3 variables must be set in this script first"
-        head ./bigSetup.sh -n 21 | tail -n 3
+        head ./fullSetup.sh -n 21 | tail -n 3
         exit 128
 fi
 
