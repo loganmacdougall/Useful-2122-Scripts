@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Author: Logan MacDougall
+# Filename: libportal
+
+# This will create a "portal" to your lib folder
+# so that it can be accessed from anywhere
+
+#This is done by making a symbolic link
+#using the link command (ln)
+
+LIBFOLDER="/users/cs/macdougall/Courses/CSCI2122/Labs/libs"
+RANDOM_MESSAGE="Now you're thinking with portals"
+
+if [ ! -e "./libportal" ]; then
+    ln -s ${LIBFOLDER} ./libportal
+
+    if [ ! -z "$RANDOM_MESSAGE" ]; then
+        number=$RANDOM;
+        let "number %= 10";
+        if [ $number == 0 ]; then
+           echo $RANDOM_MESSAGE
+        fi
+    fi
+fi

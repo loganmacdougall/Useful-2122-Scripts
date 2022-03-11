@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Author: Logan MacDougall
+# Filename: mkscript
+
+# Creates a file already setup with the ability
+# to execute and has #!/bin/bash pre written
+# at the top
+
+if [ $# == 0 ]; then
+    echo "Must provide a file name"
+    echo "Usage: mkscript NAME"
+    exit 128
+fi
+
+touch $1
+chmod 755 $1
+cat >> $1 << EOF
+#!/bin/bash
+
+EOF
