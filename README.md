@@ -1,8 +1,19 @@
+# Lab Helper Scripts
+
+There are 3 scripts which will help allow the user to get around the lab files much quicker.
+No more long cd/cp commands.
+
+To setup, you need to
+1. download/copy and setup script into your terminal (Should have the fullSetup.sh)
+2. set the 3 variables which are close to the top of the script
+3. run the setup script
+4. logout and log back in
+
+Now everything should work without anymore hassle and the setup script can be deleted.
+
+You can see what each of the 3 scripts do by going into the .bin folder newly created in your terminal and reading the comments
+
 # autoObjDump
-
-Author: Logan MacDougall
-
-Filename: autoObjDump.c
 
 Will automatically show you the assembly instructions for your
 C code as soon as the code has been modified
