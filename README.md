@@ -13,8 +13,8 @@ new .o file, and run "objdump -d" on it
 If compiling is unsuccesful, it will print the
 gcc compiler errors instead
 
-USAGE: ./autoObjDump CFILE_EXCLUDING_EXTENSION (0-3)
+USAGE:
+./autoObjDump CFILE_EXCLUDING_EXTENSION (0-3)
 
 EXAMPLE:
-    For c-file "test.c" at opLevel 2, you would type:
-            ./autoObjDump test 2
+For c-file "test.c" at opLevel 2, you would type:       ./autoObjDump test 2
