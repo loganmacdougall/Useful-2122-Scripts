@@ -188,7 +188,7 @@ else
             if [ \$# -ge 3 -a -d \$LABSFOLDER/\$LABPREFIX\$2/\$USERNAME/Lab\$2/\$3 ]; then
                 cd \$LABSFOLDER/\$LABPREFIX\$2/\$USERNAME/Lab\$2/\$3
             elif [ \$# -ge 2 -a -d \$LABSFOLDER/\$LABPREFIX\$2/\$USERNAME ]; then
-                cd \$LABSFOLDER/\$LABPREFIX$2/\$USERNAME
+                cd \$LABSFOLDER/\$LABPREFIX\$2/\$USERNAME
             elif [ \$# -ge 2 -a -d \$LABSFOLDER/\$LABPREFIX\$2 ]; then
                 cd \$LABSFOLDER/\$LABPREFIX\$2
             else
