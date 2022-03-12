@@ -109,7 +109,7 @@ cat > libportal << FILE_EOF
 #This is done by making a symbolic link
 #using the link command (ln)
 
-LIBFOLDER="\$LIBSFOLDER"
+LIBFOLDER="$LIBSFOLDER"
 RANDOM_MESSAGE="Now you're thinking with portals"
 
 if [ ! -e "./libportal" ]; then
