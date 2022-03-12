@@ -34,9 +34,11 @@ cat >> .profile << FILE_EOF
 
 # These can be changed if you're putting your files in other places
 #path to "tp-completion.sh"
-PATH_TO_COMPLETIONS="~/.tp-completion.sh"
+PATH_TO_COMPLETIONS=".tp-completion.sh"
 #path to folder which stores "tp", "libportal", "mkscript"
-PATH_TO_SCRIPTS="~/.bin"
+PATH_TO_SCRIPTS=".bin"
+
+cd ~
 
 # gives the tp command to run as you instead of a program
 # this is required so that the tp command can change
