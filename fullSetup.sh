@@ -157,6 +157,8 @@ cat > tp << FILE_EOF
 # and your lib folder. no more long cd commands just to get into
 # lab folder 6, all it takes is "tp lab 6"
 
+USERNAME=\$(whoami)
+
 # Must set these 3 variables for it to work on your machine
 LABSFOLDER="$LABSFOLDER"
 LIBSFOLDER="$LIBSFOLDER"
