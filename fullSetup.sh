@@ -36,7 +36,7 @@ cat >> .profile << FILE_EOF
 #path to "tp-completion.sh"
 PATH_TO_COMPLETIONS=".tp-completion.sh"
 #path to folder which stores "tp", "libportal", "mkscript"
-PATH_TO_SCRIPTS=".bin"
+PATH_TO_SCRIPTS="~/.bin"
 
 cd ~
 
