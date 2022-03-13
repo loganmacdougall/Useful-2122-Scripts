@@ -5,7 +5,14 @@ No more long cd/cp commands.
 
 To setup, you need to
 1. download/copy the setup script into your terminal (Should have the name "fullSetup.sh")
+  - copy the [download link](https://github.com/loganmacdougall/Useful-2122-Scripts/raw/main/fullSetup.sh) to fullSetup.sh (right-click -> copy link address)
+  - go into timberlea and type "wget ", paste the link and click enter
+  - type "chmod 755 fullSetup.sh" to make it runnable
 2. set the 3 variables which are close to the top of the script
+  - for `LABSFOLDER`, you need to set it to the absolute path of your labs folder
+  - for `LIBSFOLDER`, you need to set it to the absolute path of your lib folder. If you don't have one, you should make one.
+     - To find both of these, just go into either folder and type "pwd"
+  - For `LABPREFIX`, you will put the prefix for all your labs (ex: if the folders are called 2122Lab_01, 2122Lab_02, 2122Lab_03, ... then the prefix would be "2122Lab_")
 3. run the setup script
 4. logout and log back in
 
